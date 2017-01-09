@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>putTextjp</title>
+<script src="script.js"></script>
+</head>
+<body>
+<h1>putTextjp</h1>
+opencv用にフォント画像を作成します．
+<hr>
+<b>使い方</b><br>
+適当にパラメータと使いたい文字列を設定してから実行ボタンを押す．<br>
+画像とヘッダファイルが出力される．<br>
+<hr>
+<form name='fm'>
+<b>設定</b><br>
+フォント
+フォントサイズ
+<input name="fontsz" type='text' value='16' style='width: 30px;'/>px<br>
+文字色(R,G,B)
+<input name="cr" type='text' value='0' style='width: 30px;'/>
+<input name="cg" type='text' value='0' style='width: 30px;'/>
+<input name="cb" type='text' value='0' style='width: 30px;'/><br>
+背景透過
+<input name="bg" type='checkbox' checked='checked'/><br>
+背景色(R,G,B)
+<input name="bgr" type='text' value='255' style='width: 30px;'/>
+<input name="bgg" type='text' value='255' style='width: 30px;'/>
+<input name="bgb" type='text' value='255' style='width: 30px;'/><br>
+画像サイズ(横,縦)
+<input name="imgw" type='text' value='1000' style='width: 40px;'/>
+<input name="imgh" type='text' value='1000' style='width: 40px;'/><br>
+登録文字<br>
+<textarea name='jp'  rows="5" cols="40">
+あいうえおかきくけこ
+さしすせそたちつてと
+日本語テスト
+</textarea><br>
+<input type="button" value="実行" onclick="func()"/><br>
+<hr>
+<b>出力</b><br>
+ログ<br>
+<textarea name='log'  rows="5" cols="40">
+ここにログが出力されます．
+</textarea><br>
+puttextjp.h<br>
+<textarea name='puttext'  rows="5" cols="40">
+ここにヘッダファイルが出力されます．
+</textarea><br>
+</form>
+<a id="download" href="#" download="puttextjp.h" onclick="DL()">ヘッダファイルダウンロード</a><br>
+↓ここにフォント用画像が出力されます．<br>
+<img id="Img"><br>
+<canvas id="canvas"></canvas><br>
+↑ここにフォント用画像が出力されます．<br>
+
+</body>
+</html>
